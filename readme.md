@@ -17,3 +17,8 @@ Part 2 (afternoon A)
 - actual data
 - togglePic function
 - basic styling
+
+part 3 (afteroon B)
+---
+- reinforce ng-repeat and ng-src
+- showing hearts 

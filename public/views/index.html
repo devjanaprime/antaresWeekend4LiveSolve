@@ -16,7 +16,7 @@
         </p>
         <img ng-src='{{event.imageUrl}}' ng-show='event.showPic' ng-click='mgc.togglePic( $index )' width='100%'/>
         <p>
-          Hearts: {{ event.hearts }}
+          <img ng-src='images/littleHeart.png' ng-repeat='hearts in event.hearts' width="18px">
           <button ng-click='mgc.heartThisEvent( $index )'>Heart This!</button>
         </p>
       </div>
