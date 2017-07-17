@@ -5,19 +5,20 @@
     <title>Antares Weekend4 Live Solve</title>
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/weekend4.css">
   </head>
   <body ng-app='myApp'>
     <h1>Antares Weekend4 Live Solve</h1>
     <div ng-controller='MyGalleryController as mgc'>
-      <div ng-repeat='event in mgc.events'>
+      <div ng-repeat='event in mgc.events' class='card'>
         <p ng-hide='event.showPic' ng-click='mgc.togglePic( $index )'>
           {{ event.description }}
         </p>
-        <img ng-src='{{event.imageUrl}}' ng-show='event.showPic' ng-click='mgc.togglePic( $index )'/>
+        <img ng-src='{{event.imageUrl}}' ng-show='event.showPic' ng-click='mgc.togglePic( $index )' width='100%'/>
         <p>
           Hearts: {{ event.hearts }}
+          <button ng-click='mgc.heartThisEvent( $index )'>Heart This!</button>
         </p>
-        <button ng-click='mgc.heartThisEvent( $index )'>Heart This!</button>
       </div>
     </div>
   </body>

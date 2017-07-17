@@ -1,4 +1,5 @@
 var myApp = angular.module( 'myApp', [] );
+var verbose = false;
 
 myApp.controller( 'MyGalleryController', function(){
   var vm = this;
@@ -56,16 +57,14 @@ myApp.controller( 'MyGalleryController', function(){
   // end content //
   // add a heart to an event
   vm.heartThisEvent = function( eventIndex ){
-    console.log( 'in controller heartThisEvent:', eventIndex );
+    if( verbose ) console.log( 'in controller heartThisEvent:', eventIndex );
     // gimme a heart
     vm.events[ eventIndex ].hearts++;
   }; //end heartThisEvent
 
   vm.togglePic = function( eventIndex ){
-    console.log( 'in controller togglePic:', eventIndex );
-    console.log( 'vm.events at index:', vm.events[ eventIndex ] );
-    console.log( 'vm.events showPic at index:', vm.events[ eventIndex ].showPic );
+    if( verbose ) console.log( 'in controller togglePic:', eventIndex );
     vm.events[ eventIndex ].showPic = !vm.events[ eventIndex ].showPic;
-    console.log( 'vm.events showPic at index after:', vm.events[ eventIndex ].showPic );
+    if( verbose ) console.log( 'vm.events showPic at index after:', vm.events[ eventIndex ].showPic );
   }; //end togglePic
 }); // end controller

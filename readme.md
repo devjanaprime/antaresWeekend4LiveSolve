@@ -16,3 +16,4 @@ Part 2 (afternoon A)
 - ng-show, ng-hide
 - actual data
 - togglePic function
+- basic styling
