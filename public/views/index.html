@@ -9,10 +9,16 @@
   <body ng-app='myApp'>
     <h1>Antares Weekend4 Live Solve</h1>
     <div ng-controller='MyGalleryController as mgc'>
-      <p ng-repeat='event in mgc.events'>
-        {{ event }}
+      <div ng-repeat='event in mgc.events'>
+        <p ng-hide='event.showPic' ng-click='mgc.togglePic( $index )'>
+          {{ event.description }}
+        </p>
+        <img ng-src='{{event.imageUrl}}' ng-show='event.showPic' ng-click='mgc.togglePic( $index )'/>
+        <p>
+          Hearts: {{ event.hearts }}
+        </p>
         <button ng-click='mgc.heartThisEvent( $index )'>Heart This!</button>
-      </p>
+      </div>
     </div>
   </body>
 </html>

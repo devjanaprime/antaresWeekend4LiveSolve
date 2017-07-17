@@ -10,3 +10,9 @@ Part 1 (morning)
 - ng-click
 - ng-repeat
 - $index
+
+Part 2 (afternoon A)
+---
+- ng-show, ng-hide
+- actual data
+- togglePic function
